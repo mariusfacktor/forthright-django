@@ -42,3 +42,14 @@ All together, here's an example django project:
 </div>
 <br>
 
+
+## Limitations
+
+You can only pass arguments by value, not by reference. For example, if an argument is a list, the server function will receive a copy of that list.
+
+If an argument is a custom object, the class definition must be present in both the client code and the server code.
+
+
+
+
+
