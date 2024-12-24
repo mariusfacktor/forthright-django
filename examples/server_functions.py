@@ -1,4 +1,3 @@
-
 from forthright_django import forthright_server
 
 def add_and_sub(numA, numB):
