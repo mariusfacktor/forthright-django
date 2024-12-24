@@ -37,7 +37,6 @@ forthright-django is a Django app to allow developers to directly call server fu
 
 All together, here's an example django project:
 
-<br>
 <div float="left">
     <img src="./examples/example_django_project.png" alt="example_django_project" height="400">
 </div>
