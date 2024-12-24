@@ -14,7 +14,7 @@ forthright-django is a Django app to allow developers to directly call server fu
     ```
     INSTALLED_APPS = [
         ...,
-        'forthright_django.apps.ForthrightConfig',
+        'forthright_django',
     ]
     ```
 
