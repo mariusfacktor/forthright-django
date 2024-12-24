@@ -45,7 +45,7 @@ All together, here's an example django project:
 And corresponding clieint:
 
 <div float="left">
-    <img src="./examples/example_client.png" alt="example_client" height="120">
+    <img src="./examples/example_client.png" alt="example_client" height="133">
 </div>
 <br>
 
