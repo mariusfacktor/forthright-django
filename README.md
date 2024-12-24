@@ -32,7 +32,7 @@ forthright-django is a Django app to allow developers to directly call server fu
     `from . import server_functions`
 
 
-5. Now you can instantiate a forthright_client object on the client and directly call server functions that you exported. For example, [examples/client.py](./examples/client.py)
+5. Now you can instantiate a forthright_client object on the client and directly call the server functions that you exported. For example, [examples/client.py](./examples/client.py)
 
 
 All together, here's an example django project:
