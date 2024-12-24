@@ -35,6 +35,9 @@ forthright-django is a Django app to allow developers to directly call server fu
 5. Now you can instantiate a forthright_client object on the client and directly call server functions that you exported. For example, [examples/client.py](./examples/client.py)
 
 
+All together, here's an example django project:
+
+<br>
 <div float="left">
     <img src="./examples/example_django_project.png" alt="example_django_project" height="400">
 </div>
