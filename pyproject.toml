@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "forthright-django"
-version = "0.0.1"
+version = "0.0.2"
 dependencies = [
 ]
 description = "A Django app to call server functions directly from the client."
@@ -33,4 +33,4 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/mariusfacktor/forthright"
+Homepage = "https://github.com/mariusfacktor/forthright-django"
