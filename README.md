@@ -27,10 +27,10 @@ forthright-django is a Django app to allow developers to directly call server fu
     ]
     ```
 
-4. Instantiate a forthright_server object and export your server functions. For example, place [tests/server_functions.py](./tests/server_functions.py) in your django project folder, and import this file in urls.py
+4. Instantiate a forthright_server object and export your server functions. For example, place [examples/server_functions.py](./examples/server_functions.py) in your django project folder, and import this file in urls.py
 
     `from . import server_functions`
 
 
-5. Now you can instantiate a forthright_client object on the client and directly call server functions that you exported. For example, [tests/client.py](./tests/client.py)
+5. Now you can instantiate a forthright_client object on the client and directly call server functions that you exported. For example, [examples/client.py](./examples/client.py)
 
