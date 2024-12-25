@@ -42,7 +42,7 @@ All together, here's an example django project:
 </div>
 <br>
 
-And corresponding clieint:
+And corresponding client:
 
 <div float="left">
     <img src="./examples/example_client.png" alt="example_client" height="133">
