@@ -1,18 +1,26 @@
 
 from rest_framework.decorators import api_view
 from django.http import HttpResponse
+import json
 
 
-from .forthright_server import g_exported_functions_dict, unserialize_arguments_server, serialize_arguments
+from .forthright_server import g_exported_functions_dict, unserialize_arguments_server, serialize_arguments, \
+                                g_safe_mode, MyJsonEncoder, specify_type_hook
 
 
 @api_view(['PUT'])
 def get_data(request):
 
+
     global g_exported_functions_dict
+    global g_safe_mode
 
     data = request.body
-    unserialized = unserialize_arguments_server(data)
+
+    if g_safe_mode:
+        unserialized = json.loads(data, object_hook=specify_type_hook)
+    else:
+        unserialized = unserialize_arguments_server(data)
 
 
     function_name = unserialized[0]
@@ -25,9 +33,15 @@ def get_data(request):
         raise KeyError('forthright: %s() not found. Use forthright_server.export_functions(%s)' %(function_name, function_name))
 
 
-    outputs_serialized = serialize_arguments(outputs)
+    if g_safe_mode:
+        json_encoder = MyJsonEncoder()
+        content_type = 'application/json'
+        outputs_serialized = json_encoder.encode(outputs)
+    else:
+        content_type = 'application/octet-stream'
+        outputs_serialized = serialize_arguments(outputs)
 
-    return HttpResponse(outputs_serialized, content_type='application/octet-stream')
+    return HttpResponse(outputs_serialized, content_type=content_type)
 
 
 

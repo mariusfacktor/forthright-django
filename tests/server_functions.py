@@ -1,6 +1,7 @@
 
 from forthright_django import forthright_server
 
+
 # test1 -- mixed type input arguments and multiple outputs
 def calculate_values(operation, x, y, z):
     if operation == 'add':
@@ -38,13 +39,13 @@ def optional_input(optional_arg=42):
     return optional_arg
 
 
-# test5 -- argument is a list 
-def input_list(arg_list):
-    return arg_list
+# test5 -- argument is an arbitrary type
+def send_back_same(arg):
+    return arg
 
 
 
-frs = forthright_server()
-frs.export_functions(calculate_values, concat_words, increment_age, optional_input, input_list)
+frs = forthright_server(safe_mode=True)
+frs.export_functions(calculate_values, concat_words, increment_age, optional_input, send_back_same)
 
 
