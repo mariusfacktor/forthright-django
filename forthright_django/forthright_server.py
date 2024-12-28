@@ -58,7 +58,13 @@ class MyCustomUnpickler(pickle.Unpickler):
         global g_caller_module_name
 
         module_name = g_caller_module_name
-        return super().find_class(module_name, name)
+
+        try:
+            # try same module as sender (works for numpy)
+            return super().find_class(module, name)
+        except:
+            # try module in which forthright was instantiated (works for custom class)
+            return super().find_class(module_name, name)
 
 
 def serialize_arguments(*args):
