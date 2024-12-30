@@ -46,6 +46,6 @@ def send_back_same(arg):
 
 
 frs = forthright_server(safe_mode=False)
-frs.export_functions(calculate_values, concat_words, increment_age, optional_input, send_back_same)
+frs.register_functions(calculate_values, concat_words, increment_age, optional_input, send_back_same)
 
 

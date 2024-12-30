@@ -103,7 +103,7 @@ class forthright_server:
         g_caller_module_name = module_name
 
 
-    def export_functions(self, *funcs):
+    def register_functions(self, *funcs):
 
         global g_exported_functions_dict
 
