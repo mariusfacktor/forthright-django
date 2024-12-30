@@ -2,7 +2,7 @@
 # forthright-django
 
 
-forthright-django is a Django app to allow developers to directly call server functions from the client. 
+forthright-django is a Remote Procedure Call (RPC) Django app to allow you to directly call server functions from the client. 
 
 ## Quick start
 
