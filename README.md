@@ -6,7 +6,7 @@ forthright-django is a Django app to allow developers to directly call server fu
 
 ## Quick start
 
-1. `pip install -i https://test.pypi.org/simple/ forthright-django`
+1. `pip install forthright-django`
 
 
 2. Add forthright-django to INSTALLED_APPS in your django project settings.py:
